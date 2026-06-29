@@ -14,3 +14,5 @@ class Subject:
             return NotImplemented
         return self.name.lower() == other.name.lower()
     
+    def __hash__(self):
+        return hash(self.name.lower())
