@@ -8,16 +8,15 @@ class Classroom:
         self.students = []
 
     def add_student(self, student):
-        if self.__eq__(student):
-            raise ValueError(f"Student with roll number {student.roll_number} already exists.")
+        for existing in self.students:
+            if existing == student:  # calls Student.__eq__ 
+                raise ValueError(f"Student with roll number {student.roll_number} already exists.")
         self.students.append(student)
 
     def remove_student(self, roll_number):
         student = self.get_student(roll_number)
         self.students.remove(student)
         return student
-        if not student:
-            raise ValueError(f"Student with roll number {roll_number} not found.")
         
     def get_student(self, roll_number):
         for student in self.students:
@@ -52,7 +51,7 @@ class Classroom:
                 {
                     "name": student.name,
                     "roll_number": student.roll_number,
-                    "grades": {subject.name: marks for subject, marks in student.grades.items()}
+                    "grades": {subject.name: { "marks": marks , "max_marks": subject.max_marks } for subject, marks in student.grades.items()}
                 }
                 for student in self.students
             ]
@@ -67,13 +66,13 @@ class Classroom:
         self.students = []
         for student_data in data["students"]:
             student = Student(student_data["name"], student_data["roll_number"])
-            for subject_name, marks in student_data["grades"].items():
-                subject = Subject(subject_name)
-                student.add_grade(subject, marks)
+            for subject_name, grade_data in student_data["grades"].items():
+                subject = Subject(subject_name, grade_data["max_marks"]) 
+                student.add_grade(subject, grade_data["marks"])
             self.students.append(student)
 
     def __str__(self):
-        return f"Classroom: {self.class_name} with {len(self.students)} students"
+        return f"Classroom: {self.class_name} ({len(self.students)} students)"
     
     def __len__(self):
         return len(self.students)
