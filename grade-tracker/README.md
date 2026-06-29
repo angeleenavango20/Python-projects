@@ -1,6 +1,14 @@
 # Student Grade Tracker
 
-A command-line app to manage students and grades, built with Python OOP.
+A command-line Python project for managing students, subjects, and grades — built with object-oriented programming.
+
+## What it does
+
+- Add students to a classroom and assign grades per subject
+- Calculate each student's average and percentage automatically
+- Print formatted report cards and classroom rankings
+- Save and reload all data from a JSON file
+- Handles invalid input with proper error messages
 
 ## Structure
 ```
