@@ -1,3 +1,6 @@
+from .person import Person
+from .subject import Subject
+
 class Student(Person):
     student_counter = 0
     def __init__(self, name, roll_number):
