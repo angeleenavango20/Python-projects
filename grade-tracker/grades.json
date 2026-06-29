@@ -1,0 +1,59 @@
+{
+  "class_name": "Class 10A",
+  "students": [
+    {
+      "name": "Arjun",
+      "roll_number": 1,
+      "grades": {
+        "Maths": {
+          "marks": 88,
+          "max_marks": 100
+        },
+        "Science": {
+          "marks": 76,
+          "max_marks": 100
+        },
+        "English": {
+          "marks": 91,
+          "max_marks": 100
+        }
+      }
+    },
+    {
+      "name": "Priya",
+      "roll_number": 2,
+      "grades": {
+        "Maths": {
+          "marks": 95,
+          "max_marks": 100
+        },
+        "Science": {
+          "marks": 89,
+          "max_marks": 100
+        },
+        "English": {
+          "marks": 93,
+          "max_marks": 100
+        }
+      }
+    },
+    {
+      "name": "Rahul",
+      "roll_number": 3,
+      "grades": {
+        "Maths": {
+          "marks": 70,
+          "max_marks": 100
+        },
+        "Science": {
+          "marks": 65,
+          "max_marks": 100
+        },
+        "English": {
+          "marks": 78,
+          "max_marks": 100
+        }
+      }
+    }
+  ]
+}
