@@ -67,7 +67,7 @@ def main():
     print(f"First student after reload: {new_classroom.students[0]}")
 
     # 10. CLASS-LEVEL COUNTER
-    print(f"\nTotal students ever created: {Student.student_count}")
+    print(f"\nTotal students ever created: {Student.student_counter}")
 
 
 if __name__ == "__main__":
